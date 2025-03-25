@@ -173,6 +173,19 @@ img {
 	.sales-pitch {
 		grid-column: span 2;
 		height: 100%;
+		padding: 2.4rem 3.6rem 2.4rem 2.4rem;
+	}
+
+	.sales-pitch h1 {
+		font-size: 1.5rem;
+	}
+
+	.sales-pitch h2 {
+		font-size: 1.1rem;
+	}
+
+	.sales-pitch p {
+		font-size: 1rem;
 	}
 
 	.subscription {
