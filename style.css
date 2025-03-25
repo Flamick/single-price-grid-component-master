@@ -1,0 +1,188 @@
+:root {
+	--cyan: hsl(179, 62%, 43%);
+	--bright-yellow: hsl(71, 73%, 54%);
+	--light-gray: hsl(204, 43%, 93%);
+	--grayish-blue: hsl(218, 22%, 67%);
+	--primary-font: "Karla", sans-serif;
+}
+
+/* Style Reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--primary-font);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background: var(--light-gray);
+}
+
+img {
+	max-width: 100%;
+}
+
+.container {
+	margin: 4rem auto;
+	padding: 0 1.8rem;
+}
+
+.grid-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.2);
+}
+
+.sales-pitch {
+	background: #fff;
+	padding: 1.6rem 1.4rem;
+	border-radius: 5px 5px 0 0;
+}
+
+.sales-pitch h1 {
+	color: var(--cyan);
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+
+.sales-pitch h2 {
+	padding: 1.6rem 0;
+	font-size: 0.9rem;
+	color: var(--bright-yellow);
+}
+
+.sales-pitch p {
+	font-size: 0.9rem;
+	line-height: 1.8;
+	color: var(--grayish-blue);
+}
+
+.subscription {
+	background: var(--cyan);
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 1.6rem 1.4rem;
+	width: 100%;
+}
+
+.subscription h2 {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.monthly {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	padding-top: 1rem;
+}
+
+.monthly p {
+	font-weight: 100;
+	color: var(--light-gray);
+	font-size: 1rem;
+	padding-left: 1rem;
+}
+
+.monthly h3 {
+	font-size: 2rem;
+	font-weight: 500;
+	color: #fff;
+}
+
+.daily {
+	font-size: 1rem;
+	font-weight: 200;
+	color: #fff;
+	padding: 0.6rem 0 2rem 0;
+}
+
+.btn {
+	background: var(--bright-yellow);
+	width: 100%;
+	text-align: center;
+	padding: 1rem;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.35);
+}
+
+.about {
+	padding: 1.4rem;
+	background: var(--cyan);
+	position: relative;
+	border-radius: 0 0 5px 5px;
+	color: #fff;
+	width: 100%;
+}
+
+.about::after {
+	position: absolute;
+	content: "";
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.15;
+	border-radius: 0 0 5px 5px;
+	z-index: 1;
+}
+
+.about h2 {
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+
+.about ul {
+	padding-top: 1.6rem;
+	font-size: 0.9rem;
+	line-height: 1.4;
+	list-style: none;
+	font-weight: 100;
+	color: var(--light-gray);
+}
+
+@media screen and (min-width: 600px) {
+	.grid-container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 45%, 55%;
+		max-width: 625px;
+		height: 475px;
+		gap: 0;
+	}
+
+	.sales-pitch {
+		grid-column: span 2;
+		height: 100%;
+	}
+
+	.subscription {
+		height: 100%;
+		border-radius: 0 0 0 5px;
+		padding: 2.4rem;
+	}
+
+	.about {
+		height: 100%;
+		border-radius: 0 0 5px 0;
+		padding: 2.6rem;
+	}
+
+	.about::after {
+		border-radius: 0 0 5px 0;
+	}
+}
