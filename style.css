@@ -156,6 +156,11 @@ img {
 }
 
 @media screen and (min-width: 600px) {
+	.container {
+		padding: 0;
+		margin: 9rem auto 2rem auto;
+	}
+
 	.grid-container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
